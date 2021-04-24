@@ -22,11 +22,14 @@ body {
 
 
 
-main{
+main {
+    /*
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /* flex-direction: column;
+    
+    justify-content: flex-end;
+    flex-direction: column;
+    /*
     justify-content: right;
     align-items: center;
     width: 70%; */
@@ -56,10 +59,8 @@ h1 {
 
 h2 {
     padding-right: 5px;
-    text-align: right;
-    height: 60px;
-    width: 25%;
     font-size: 50px;
+    text-align: right;
 }
 
 nav li {
@@ -86,34 +87,42 @@ nav a:hover {
 }
 
 aside {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-start;
+    flex-flow: column wrap;
     width: 25%;
-    text-align: right;
-    margin: 13px;
 }
 
 section {
-    /*
-    position: relative;
-    display: inline;
-    margin: 6px;
-    min-height: 200px;   
-    */
-    
     display: flex; 
     flex-direction: row;
-    justify-content: right;
-    
+    align-items: stretch;
+    justify-content: flex-start;
+    align-self: center;
     width: 100%;
-    padding: 10px;
+    padding: 13px;
     color: var(--font-box-color);
 }
 
 
 figure {
-    /* flex-grow: 1; */
-    /* flex: 0 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+    
+    /* min-height: 100%; */
+
+    /* flex: 1 0 100%; */
+    /* when the screen resizes, make it so our columns don't jump in size */
+    /* transition: flex-basis 500ms linear; */
+    /* flex-grow: 1; */
+
+    /* flex: 0 1 auto; */
+    
+    /*
     justify-content: center;
     align-items:flex-start;
     padding: 30px 30px 60px 60px;
@@ -121,6 +130,12 @@ figure {
 }
 
 article {
+    /*
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-start;
+    flex: 0 1 auto;
+    */
     /*
     border-color: var(--font-box-color);
     border-left-style: solid;
@@ -149,9 +164,11 @@ article {
     border-radius: 6px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.5;
-    transition-duration: initial;
+    /* opacity: 0.5; */
+    /* transition-duration: 0.3s; */
+    /* transition: all 0.3s ease-in-out; */
 }
+
 
 .small-image {
     margin: 6px;
@@ -161,17 +178,18 @@ article {
     max-width: 450px;
     max-height: 300px;
     border-radius: 3px;
-    opacity: 0.5;
-    transition-duration: initial;
+    /* opacity: 0.5; */
+    /* transition: all 0.3s ease-in-out; */
 }
 
 .large-image:hover, 
 .small-image:hover {
-    opacity: 1.0;
-    transition-duration: 0.3s;
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
 }
 
-.left-border { 
+
+.right-content { 
     border-color: var(--font-box-color);
     border-left-style: solid;
     border-width: 6px;
