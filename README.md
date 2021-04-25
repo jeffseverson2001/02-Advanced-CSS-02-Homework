@@ -16,7 +16,7 @@ Published Github Site URL:
 https://jeffseverson2001.github.io/02-Advanced-CSS-02-Homework/
 
 
-    ![alt text](assets/images/screenshot.png)
+    ![alt Jeff Severson Site Image](https://jeffseverson2001.github.io/02-Advanced-CSS-02-Homework/JeffSeversonPortfolio.png)
 
 ##  Credits
 
